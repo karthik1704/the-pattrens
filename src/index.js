@@ -1,6 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import './css/plugins.css';
+import './css/style.css';
+// import $ from 'jquery';
+// import './js/functions';
+// import './js/plugins';
+
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
