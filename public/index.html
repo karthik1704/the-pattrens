@@ -5,7 +5,10 @@
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Help UI/UX desingers" />
+    <meta
+      name="description"
+      content="Check out the hand-picked collection of latest mobile design patternsfrom apps that reflect the best in design"
+    />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -36,5 +39,64 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+    <script src="js/jquery.js"></script>
+    <script src="js/plugins.js"></script>
+
+    <script src="js/functions.js"></script>
+    <script type="text/javascript">
+      /////// j
+
+      //// filter accordion
+      function accordion(section, heading, list) {
+        $(section).each(function () {
+          var that = this,
+            listHeight = $(this).find(list).height();
+
+          $(this)
+            .find(heading)
+            .click(function () {
+              $(this).toggleClass('plus');
+              $(that).find(list).toggle(
+                {
+                  height: '0',
+                },
+                250
+              );
+            });
+        });
+      }
+
+      accordion(
+        '.filter-item',
+        '.filter-item-inner-heading',
+        '.filter-attribute-list'
+      );
+    </script>
+    <script type="text/javascript">
+      $('.filter-sidebar').hide();
+
+      $('.filter-home').click(function () {
+        $('.filter-sidebar').toggle();
+        close - icon;
+      });
+    </script>
+    <script type="text/javascript">
+      $('.close-icon').click(function () {
+        $('.filter-sidebar').hide();
+      });
+    </script>
+    <script type="text/javascript">
+      $('.tag-menu').hide();
+      $('.tag-content').click(function () {
+        $('.tag-menu').toggle();
+      });
+    </script>
+    <script type="text/javascript">
+      $('.tag-menu').hide();
+      $('.tag-design a').click(function () {
+        $('.tag-menu').toggle();
+      });
+    </script>
   </body>
 </html>
